@@ -15,7 +15,7 @@ searchBtn.addEventListener("click", () => {
   searchBtn.textContent = "Loading...";
 
   fetch(
-    `/weather?city=${encodeURIComponent(cityName)}`
+    `/api/weather?city=${encodeURIComponent(cityName)}`
   )
     .then((res) => res.json())
     .then((data) => {

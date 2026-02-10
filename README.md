@@ -4,6 +4,12 @@ A modern full-stack weather web application built using HTML, CSS, JavaScript, a
 
 This project demonstrates frontend + backend integration, API security best practices, and clean project structuring — making it suitable for internship, placement, and portfolio showcase.
 
+## 🌐 Live Demo
+
+**[View Live Demo]()** 🚀
+
+> Deployed on [Vercel](https://vercel.com) 
+
 ## 🚀 Features
 
 * 🌍 Search weather by city name

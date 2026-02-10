@@ -6,7 +6,7 @@ This project demonstrates frontend + backend integration, API security best prac
 
 ## 🌐 Live Demo
 
-**[View Live Demo]()** 🚀
+**[View Live Demo](https://node-weather-app-lemon.vercel.app/)** 🚀
 
 > Deployed on [Vercel](https://vercel.com) 
 

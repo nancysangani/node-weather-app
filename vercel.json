@@ -8,12 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/api/weather",
-      "dest": "/server.js"
+      "src": "/api/weather(.*)",
+      "dest": "server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "server.js"
     }
   ]
 }

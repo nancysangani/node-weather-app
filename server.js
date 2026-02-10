@@ -1,13 +1,19 @@
 import express from "express";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+// absolute path to the public directory
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/api/weather", async (req, resp) => {
   const city = req.query.city;
@@ -24,6 +30,10 @@ app.get("/api/weather", async (req, resp) => {
   } catch (error) {
     resp.status(500).json({ error: "Failed to fetch weather data" });
   }
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
